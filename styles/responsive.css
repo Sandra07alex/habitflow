@@ -1,0 +1,93 @@
+@media (min-width: 640px) {
+  .navbar__links {
+    display: flex;
+  }
+
+  .footer__inner {
+    flex-direction: row;
+  }
+
+  .modal-overlay {
+    align-items: center;
+    padding: var(--space-4);
+  }
+
+  .modal {
+    border-radius: var(--radius-3xl);
+  }
+}
+
+
+@media (min-width: 768px) {
+  .hero__grid {
+    grid-template-columns: 1fr 1fr;
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+
+  .hero__title {
+    font-size: var(--text-6xl);
+  }
+
+  .features {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+
+  .features__title {
+    font-size: var(--text-4xl);
+  }
+
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .how__inner {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+
+  .how__title {
+    font-size: var(--text-4xl);
+  }
+
+  .how__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .faq {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+
+  .faq__title {
+    font-size: var(--text-4xl);
+  }
+
+  .cta__panel {
+    padding: var(--space-16);
+  }
+
+  .cta__title {
+    font-size: var(--text-5xl);
+  }
+
+  .app-main {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+  }
+
+  .today-header__title {
+    font-size: var(--text-4xl);
+  }
+
+  .habits-header__title {
+    font-size: var(--text-4xl);
+  }
+}
+
+@media (max-width: 639px) {
+  .hero__title {
+    font-size: var(--text-5xl);
+  }
+}

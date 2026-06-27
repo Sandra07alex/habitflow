@@ -1,19 +1,21 @@
-import CTA from "@/components/Landing/CTA/CTA";
-import Features from "@/components/Landing/Features/Features";
-import Footer from "@/components/Landing/Footer/Footer";
-import Hero from "@/components/Landing/Hero/Hero";
-import Journey from "@/components/Landing/Journey/Journey";
-import Navbar from "@/components/Landing/Navbar/Navbar";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/home/Hero";
+import Features from "@/components/home/Features";
+import HowItWorks from "@/components/home/HowItWorks";
+import FAQ from "@/components/home/FAQ";
+import CTA from "@/components/home/CTA";
+import Footer from "@/components/layout/Footer";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
+    <div className="page">
       <Navbar />
       <Hero />
-      <Journey />
       <Features />
+      <HowItWorks />
+      <FAQ />
       <CTA />
       <Footer />
-    </main>
+    </div>
   );
 }

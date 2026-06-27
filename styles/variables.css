@@ -1,0 +1,101 @@
+:root {
+  /* Colors */
+  --background: #ffffff;
+  --foreground: #111111;
+  --surface: #fafafb;
+  --surface-foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #111111;
+  --primary-foreground: #ffffff;
+  --secondary: #fcfcfd;
+  --secondary-foreground: #111111;
+  --muted: #fcfcfd;
+  --muted-foreground: #666666;
+  --accent: #f3f3f4;
+  --accent-foreground: #111111;
+  --destructive: #ff5f57;
+  --destructive-foreground: #ffffff;
+  --border: #ececec;
+  --input: #ececec;
+  --ring: #0a84ff;
+  --brand: #0a84ff;
+  --brand-foreground: #ffffff;
+  --brand-soft: #e5f1ff;
+  --success: #30d158;
+  --warning: #ff9f0a;
+  --error: #ff5f57;
+
+  --accent-red: #ff5f57;
+  --accent-orange: #ff9f0a;
+  --accent-yellow: #ffd60a;
+  --accent-green: #30d158;
+  --accent-cyan: #64d2ff;
+  --accent-blue: #0a84ff;
+  --accent-purple: #bf5af2;
+  --accent-pink: #ff2d55;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-1-5: 0.375rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* Radius */
+  --radius: 0.875rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Z-index */
+  --z-header: 20;
+  --z-modal: 30;
+
+  /* Layout */
+  --max-w-md: 28rem;
+  --max-w-lg: 32rem;
+  --max-w-2xl: 42rem;
+  --max-w-3xl: 48rem;
+  --max-w-6xl: 72rem;
+
+  /* Fonts (overridden by next/font in layout) */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
