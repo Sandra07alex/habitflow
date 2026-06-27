@@ -1,1 +1,207 @@
 
+/* ── Section ─────────────────────────────────────────────── */
+.section {
+  background: var(--color-white);
+  padding: var(--space-24) var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ── Milestones row ──────────────────────────────────────── */
+.milestones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  width: 100%;
+  position: relative;
+}
+
+/* ── Single milestone ────────────────────────────────────── */
+.milestone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+  position: relative;
+}
+
+/* Dashed connector between milestones */
+.connector {
+  position: absolute;
+  top: 80px;
+  right: calc(-1 * var(--space-4) - 1px);
+  width: calc(var(--space-8) + 2px);
+  height: 1px;
+  border-top: 1.5px dashed var(--color-gray-200);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Circle ──────────────────────────────────────────────── */
+.circleWrap {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+}
+
+.circleWrap::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  background: var(--glow);
+  filter: blur(16px);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: 0;
+}
+
+.circleWrap:hover::before {
+  opacity: 1;
+}
+
+.circleWrap:hover {
+  transform: translateY(-6px);
+}
+
+.circleSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.circleInner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.value {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.unit {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Milestone text ──────────────────────────────────────── */
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 240px;
+}
+
+.milestoneTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.milestoneDesc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .circleWrap {
+    width: 130px;
+    height: 130px;
+  }
+
+  .value {
+    font-size: 34px;
+  }
+
+  .connector {
+    top: 65px;
+  }
+}
+
+@media (max-width: 640px) {
+  .milestones {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .connector {
+    display: none;
+  }
+
+  .milestone {
+    flex-direction: row;
+    text-align: left;
+    gap: var(--space-6);
+    align-items: flex-start;
+  }
+
+  .circleWrap {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+  }
+
+  .value {
+    font-size: 28px;
+  }
+
+  .text {
+    max-width: none;
+    flex: 1;
+    padding-top: var(--space-2);
+  }
+}
