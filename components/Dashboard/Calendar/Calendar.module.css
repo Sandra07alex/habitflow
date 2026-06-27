@@ -1,1 +1,155 @@
+.calendar {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.header h3 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+.navBtn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.navBtn:hover {
+  background: rgba(249, 248, 247, 0.5);
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.weekDay {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  padding: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.dayCell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(249, 248, 247, 0.5);
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dayCell:hover {
+  border-color: var(--color-text);
+}
+
+.dayCell.completed {
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    padding: 1.5rem;
+  }
+
+  .grid,
+  .weekDays {
+    gap: 0.5rem;
+  }
+
+  .dayCell {
+    font-size: 0.8rem;
+  }
+
+  .weekDay {
+    font-size: 0.75rem;
+  }
+
+  .legend {
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar {
+    padding: 1rem;
+  }
+
+  .header h3 {
+    font-size: 1.1rem;
+  }
+
+  .grid,
+  .weekDays {
+    gap: 0.4rem;
+  }
+
+  .dayCell {
+    font-size: 0.75rem;
+  }
+
+  .legend {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
